@@ -23,7 +23,7 @@ componentDidMount() {
     if (keys.length === 0) {
       Alert.alert(
       'This is an open source project',
-      'This app is an open source project for controlling electrical home appliances, with DIY modules. If you want to use this app you need to follow the instructions at: www.google.com . Please, do not rate this app badly at the app store if you didnt follow correctly the instructions.',
+      'This app is an open source project for controlling electrical home appliances, with DIY modules. If you want to use this app you need to follow the instructions at: https://github.com/FerZablah/Jason . Please, do not rate this app badly at the app store if you didnt follow correctly the instructions.',
       [
         { text: 'Got it!', onPress: () => AsyncStorage.setItem('FIRSTTIME', 'true') }
       ],

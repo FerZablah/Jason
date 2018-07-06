@@ -14,7 +14,6 @@ export const callWitAi = (query) => {
       fetch('https://api.wit.ai/message?v=20180613&q=' + query, {
       cache: 'no-cache',
       credentials: 'same-origin',
-      // 4VXH37FVRNHMD2U5RMRQZUJS6XDR5MCT
       headers: {
         Authorization: 'Bearer ' + key,
         'content-type': 'application/json'
