@@ -1,0 +1,13 @@
+{
+  "extends":"rallycoding",
+  "rules":{
+      "arrow-body-style": 0,
+      "prefer-template": 0,
+      "global-require":0,
+      "no-underscore-dangle":0,
+      "radix": 0
+  },
+  "globals": {
+  "fetch": false
+}
+}
