@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { HeaderButton } from './common/HeaderButton';
 import { onGetDevice, onClear } from '../actions/GetDevicesActions';
 import NavigationService from '../NavigationService.js';
+import I18n from '../translation/i18n';
 
 class Devices extends Component {
   componentWillMount() {
@@ -69,7 +70,7 @@ class Devices extends Component {
               onPress={() => this.props.screenProps.rootNavigation.openDrawer()}
             />
           }
-          centerComponent={<Text style={styles.headerTextStyle}> Devices </Text>}
+          centerComponent={<Text style={styles.headerTextStyle}> { I18n.t('DEVICESTAB') } </Text>}
           rightComponent={
             <HeaderButton
               icon={'md-add'}

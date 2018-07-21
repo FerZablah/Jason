@@ -11,6 +11,7 @@ import {
   fillDeviceData,
   onDeleteDevice
 } from '../actions/SaveDevicesActions';
+import I18n from '../translation/i18n';
 
 class ModifyDevice extends Component {
 
@@ -60,14 +61,14 @@ class ModifyDevice extends Component {
               }
               centerComponent={
                 <Text style={styles.headerTextStyle}>
-                  {this.props.name === '' ? 'New Device' : this.props.name}
+                  {this.props.name === '' ? I18n.t('NEWDEVICE') : this.props.name}
                 </Text>
               }
             />
             <View style={styles.topContainer}>
               <Input
-                placeholder='Bedroom Lights'
-                label='Device Name'
+                placeholder={I18n.t('NEWDEVICEPLACEHOLDER')}
+                label={I18n.t('DEVICENAME')}
                 labelStyle={{ color: 'white' }}
                 inputContainerStyle={styles.inputContainer}
                 containerStyle={{ margin: 5 }}
@@ -103,7 +104,7 @@ class ModifyDevice extends Component {
 
           <View style={styles.buttonContainer}>
             <Button
-              title='Save'
+              title={I18n.t('SAVE')}
               containerViewStyle={{ height: 100 }}
               buttonStyle={{
                 height: 60,
@@ -112,7 +113,7 @@ class ModifyDevice extends Component {
               onPress={this.saveDevice.bind(this)}
             />
             <Button
-              title='Delete'
+              title={I18n.t('DELETE')}
               containerViewStyle={{ height: 100 }}
               buttonStyle={{
                 height: 60,

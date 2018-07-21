@@ -5,6 +5,7 @@ import { Header, Input, Button } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { HeaderButton } from './common/HeaderButton';
 import { onInputChanged, onSaveKeys } from '../actions/SettingsActions';
+import I18n from '../translation/i18n';
 
 class Settings extends Component {
   render() {
@@ -22,8 +23,8 @@ class Settings extends Component {
         />
         <View style={styles.topContainer}>
           <Input
-            placeholder='Your Key'
-            label='Ubidots Key'
+            placeholder={I18n.t('KEYPLACEHOLDER')}
+            label={I18n.t('UBIDOTSKEYLABEL')}
             labelStyle={{ color: 'white' }}
             containerStyle={{ margin: 5 }}
             inputStyle={{ color: 'white' }}
@@ -32,20 +33,9 @@ class Settings extends Component {
             onChangeText={(text) => this.props.onInputChanged('ubidotsInput', text)}
             value={this.props.ubidotsInput}
           />
-          <Input
-            placeholder='Your Key'
-            label='WIT.AI Key'
-            labelStyle={{ color: 'white' }}
-            containerStyle={{ margin: 5 }}
-            inputStyle={{ color: 'white' }}
-            placeholderTextColor='rgba(255, 255, 255, 0.2)'
-            inputContainerStyle={styles.inputContainer}
-            onChangeText={(text) => this.props.onInputChanged('witInput', text)}
-            value={this.props.witInput}
-          />
         </View>
         <Button
-          title='Save'
+          title={I18n.t('SAVE')}
           containerStyle={{ borderWidth: 2 }}
           buttonStyle={{
             height: 60,
@@ -53,7 +43,7 @@ class Settings extends Component {
           }}
           onPress={() => {
             Keyboard.dismiss();
-            this.props.onSaveKeys(this.props.witInput, this.props.ubidotsInput);
+            this.props.onSaveKeys(this.props.ubidotsInput);
           }}
         />
       </LinearGradient>
@@ -88,7 +78,6 @@ const styles = {
 
 const mapStateToProps = state => {
   return {
-      witInput: state.settings.witInput,
       ubidotsInput: state.settings.ubidotsInput
   };
 };

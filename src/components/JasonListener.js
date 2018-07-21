@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text, Alert, AsyncStorage } from 'react-native';
+import { View, Text, Alert, AsyncStorage, Linking } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Voice from 'react-native-voice';
+import Tts from 'react-native-tts';
 import { Header } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { Button } from './common/Button';
 import { HeaderButton } from './common/HeaderButton';
 import HUDAnimation from '../HUDAnimation';
-
+import I18n from '../translation/i18n';
 import {
   recognizeSpeech,
   recognizedSuccess,
@@ -21,11 +22,16 @@ class JasonListener extends Component {
 componentDidMount() {
   AsyncStorage.getAllKeys().then((keys) => {
     if (keys.length === 0) {
+      const message = (I18n.t('INITIALMESSAGE')).toString();
+      const title = (I18n.t('INITIALMESSAGETITLE')).toString();
+      const okButton = (I18n.t('ALERTBUTTON')).toString();
+      const webButton = (I18n.t('WEBBUTTON')).toString();
       Alert.alert(
-      'This is an open source project',
-      'This app is an open source project for controlling electrical home appliances, with DIY modules. If you want to use this app you need to follow the instructions at: https://github.com/FerZablah/Jason . Please, do not rate this app badly at the app store if you didnt follow correctly the instructions.',
+      title,
+       message,
       [
-        { text: 'Got it!', onPress: () => AsyncStorage.setItem('FIRSTTIME', 'true') }
+        { text: okButton, onPress: () => AsyncStorage.setItem('FIRSTTIME', 'true') },
+        { text: webButton, onPress: () => Linking.openURL('https://github.com/FerZablah/Jason') }
       ],
       { cancelable: false }
     );
@@ -68,6 +74,7 @@ componentDidMount() {
   }
 }
   startRecognizing(e) {
+    Tts.stop();
     if (this.props.hearing === false) {
       this.props.recognizeSpeech(e);
     } else {
@@ -131,7 +138,9 @@ componentDidMount() {
           </View>
 
           <View style={textContainer}>
-            <Text style={textStyle}> {this.capitalizeString(this.props.text)} </Text>
+            <Text
+              style={textStyle}
+            > {this.capitalizeString(this.props.text)} </Text>
           </View>
         </View>
 
@@ -157,6 +166,7 @@ const styles = {
   },
   textContainer: {
     flex: 1,
+    flexDirection: 'row',
     justifyContent: 'center'
   },
   linearGradient: {

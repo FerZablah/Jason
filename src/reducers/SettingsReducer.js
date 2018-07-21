@@ -3,8 +3,7 @@ import {
 } from '../actions/types';
 
 const INITIAL_STATE = {
-  ubidotsInput: '',
-  witInput: ''
+  ubidotsInput: ''
 };
 
 export default (state = INITIAL_STATE, action) => {

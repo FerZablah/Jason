@@ -1,0 +1,23 @@
+export default {
+  INITIALMESSAGE: 'Esta app es un proyecto de código abierto para controlar electrodomesticos, con aparatos fabricados por el usuario. Si desea utilizar esta app, necesita leer las instrucciones en: https://github.com/FerZablah/Jason. Por favor, no otorgue una calificación negativa en la Play Store si no ha seguido las instrucciones.',
+  INITIALMESSAGETITLE: 'Este es un proyecto de código abirto',
+  ALERTBUTTON: 'Entendido',
+  WEBBUTTON: 'Ir al sitio',
+  HOMETAB: 'Inicio',
+  DEVICESTAB: 'Dispositivos',
+  SETTINGSTAB: 'Ajustes',
+  NEWDEVICE: 'Nuevo Dispositivo',
+  DEVICENAME: 'Nombre del dispositivo',
+  NEWDEVICEPLACEHOLDER: 'Cocina',
+  SAVE: 'Guardar',
+  DELETE: 'Eliminar',
+  UBIDOTSKEYLABEL: 'Llave de Ubidots',
+  WITAIKEYLABEL: 'Llave de WIT.AI',
+  KEYPLACEHOLDER: 'Su llave',
+  SAVEDKEYTITLE: '¡Llaves guardadas!',
+  SAVEDKEYMESSAGE: 'Tus llaves han sido guardadas con éxito',
+  STTLOCALE: 'es-US',
+  UNEXISTANTDEVICERESPONSE: 'Ups, parece que no tengo ese dispositivo en mis registros, para registrarlo, por favor diríjase a la pestaña de dispositivos',
+  RECERROR: 'Hubo un error, por favor asegurese que tiene registradas sus llaves en la pestaña de ajustes',
+  WITAIKEY: 'CHKY6FMDRRXNJJ7TKROD3URLB6RK6C6L'
+};
