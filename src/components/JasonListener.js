@@ -31,7 +31,7 @@ componentDidMount() {
        message,
       [
         { text: okButton, onPress: () => AsyncStorage.setItem('FIRSTTIME', 'true') },
-        { text: webButton, onPress: () => Linking.openURL('https://github.com/FerZablah/Jason') }
+        { text: webButton, onPress: () => Linking.openURL('https://www.hackster.io/zablahdeveloper/voice-controlled-lights-from-anywhere-e22792') }
       ],
       { cancelable: false }
     );

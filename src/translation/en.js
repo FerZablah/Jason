@@ -1,5 +1,5 @@
 export default {
-  INITIALMESSAGE: 'This app is an open source project for controlling electrical home appliances, with DIY modules. If you want to use this app you need to follow the instructions at: https://github.com/FerZablah/Jason . Please, do not rate this app badly at the Play Store if you didnt follow correctly the instructions.',
+  INITIALMESSAGE: 'This app is an open source project for controlling electrical home appliances, with DIY modules. If you want to use this app you need to follow the instructions at: https://www.hackster.io/zablahdeveloper/voice-controlled-lights-from-anywhere-e22792 . Please, do not rate this app badly at the Play Store if you didnt follow correctly the instructions.',
   INITIALMESSAGETITLE: 'This is an open source project',
   ALERTBUTTON: 'Got it',
   WEBBUTTON: 'Go to website',
@@ -11,6 +11,7 @@ export default {
   NEWDEVICEPLACEHOLDER: 'Kitchen',
   SAVE: 'Save',
   DELETE: 'Delete',
+  HELP: 'Help',
   UBIDOTSKEYLABEL: 'Ubidots Key',
   WITAIKEYLABEL: 'WIT.AI Key',
   KEYPLACEHOLDER: 'Your Key',

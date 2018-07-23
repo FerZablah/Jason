@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Keyboard } from 'react-native';
+import { Text, View, Keyboard, Alert, Linking } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Header, Input, Button } from 'react-native-elements';
 import { connect } from 'react-redux';
@@ -44,6 +44,30 @@ class Settings extends Component {
           onPress={() => {
             Keyboard.dismiss();
             this.props.onSaveKeys(this.props.ubidotsInput);
+          }}
+        />
+        <Button
+          title={I18n.t('HELP')}
+          containerStyle={{ borderWidth: 2 }}
+          buttonStyle={{
+            height: 60,
+            backgroundColor: 'blue'
+          }}
+          onPress={() => {
+            Keyboard.dismiss();
+            const message = (I18n.t('INITIALMESSAGE')).toString();
+            const title = (I18n.t('INITIALMESSAGETITLE')).toString();
+            const okButton = (I18n.t('ALERTBUTTON')).toString();
+            const webButton = (I18n.t('WEBBUTTON')).toString();
+            Alert.alert(
+            title,
+             message,
+            [
+              { text: okButton },
+              { text: webButton, onPress: () => Linking.openURL('https://www.hackster.io/zablahdeveloper/voice-controlled-lights-from-anywhere-e22792') }
+            ],
+            { cancelable: false }
+          );
           }}
         />
       </LinearGradient>

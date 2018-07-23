@@ -1,5 +1,5 @@
 export default {
-  INITIALMESSAGE: 'Esta app es un proyecto de código abierto para controlar electrodomesticos, con aparatos fabricados por el usuario. Si desea utilizar esta app, necesita leer las instrucciones en: https://github.com/FerZablah/Jason. Por favor, no otorgue una calificación negativa en la Play Store si no ha seguido las instrucciones.',
+  INITIALMESSAGE: 'Esta app es un proyecto de código abierto para controlar electrodomesticos, con aparatos fabricados por el usuario. Si desea utilizar esta app, necesita leer las instrucciones en: https://www.hackster.io/zablahdeveloper/voice-controlled-lights-from-anywhere-e22792. Por favor, no otorgue una calificación negativa en la Play Store si no ha seguido las instrucciones.',
   INITIALMESSAGETITLE: 'Este es un proyecto de código abirto',
   ALERTBUTTON: 'Entendido',
   WEBBUTTON: 'Ir al sitio',
@@ -11,6 +11,7 @@ export default {
   NEWDEVICEPLACEHOLDER: 'Cocina',
   SAVE: 'Guardar',
   DELETE: 'Eliminar',
+  HELP: 'Ayuda',
   UBIDOTSKEYLABEL: 'Llave de Ubidots',
   WITAIKEYLABEL: 'Llave de WIT.AI',
   KEYPLACEHOLDER: 'Su llave',
